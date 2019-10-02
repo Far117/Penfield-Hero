@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{56681CD1-0387-4EB4-8B2B-B74C1D31EBA7}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>AtCS</RootNamespace>
+    <AssemblyName>AtCS</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExternalConsole>true</ExternalConsole>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AtScreen\Screen.cs" />
+    <Compile Include="Entities\Entity.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Tiles\Tile.cs" />
+    <Compile Include="Tiles\Dirt.cs" />
+    <Compile Include="Tiles\Wall.cs" />
+    <Compile Include="Tiles\MapParser.cs" />
+    <Compile Include="Penfield Hero\MusicGame.cs" />
+    <Compile Include="Entities\Arrow.cs" />
+    <Compile Include="Music\Song.cs" />
+    <Compile Include="Music\BeatString.cs" />
+    <Compile Include="Entities\Fretboard.cs" />
+    <Compile Include="Penfield Hero\ScoreKeeper.cs" />
+    <Compile Include="Penfield Hero\LevelEditor.cs" />
+    <Compile Include="Music\SongLibrary.cs" />
+    <Compile Include="Penfield Hero\GlobalConstants.cs" />
+    <Compile Include="Penfield Hero\MainMenu.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="AtScreen\" />
+    <Folder Include="Entities\" />
+    <Folder Include="Tiles\" />
+    <Folder Include="Penfield Hero\" />
+    <Folder Include="Music\" />
+    <Folder Include="res\" />
+    <Folder Include="res\TextBank\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\TextBank\f.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="res\TextBank\l.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="res\TextBank\r.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="res\TextBank\s.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="res\TextBank\t.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="res\TextBank\i.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="res\TextBank\m.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="res\TextBank\a.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
